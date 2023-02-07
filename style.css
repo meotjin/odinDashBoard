@@ -1,0 +1,292 @@
+:root {
+	--side-bar-clr: #1992d4;
+	--side-bar-font-clr: white;
+	--header-clr: white;
+	--body-clr: #e2e8f0;
+}
+
+* {
+	box-sizing: border-box;
+	font-family: Roboto;
+}
+
+body {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+@font-face {
+	font-family: Roboto;
+	src: url("./assets/Roboto-Regular.ttf");
+}
+
+.container {
+	width: 100vw;
+	height: 100vh;
+	display: grid;
+	grid-template: repeat(6, 1fr) / repeat(6, 1fr);
+}
+
+.header {
+	background-color: var(--header-clr);
+	grid-column: 2/7;
+	grid-row: 1/2;
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+}
+
+.header-top {
+	flex-grow: 1;
+	padding: 1em 0.5em 0.5em 2em;
+	display: flex;
+}
+
+.header-top > * {
+	display: flex;
+}
+
+.search-bar {
+	padding-top: 1em;
+	flex-grow: 1;
+	gap: 0.5em;
+}
+
+#search {
+	height: 2em;
+	flex-grow: 1;
+	border-radius: 15px;
+	background-color: var(--body-clr);
+	border: none;
+}
+
+.profile-bar {
+	padding-left: 2em;
+	padding-right: 2em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1.5em;
+}
+
+.profile-pic {
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	display: flex;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+}
+
+.profile-bar > span {
+	font-size: 1.2em;
+	font-weight: bold;
+	text-transform: capitalizes;
+}
+
+.header-bottom {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em 2em 1em 2em;
+}
+
+.big-profile-pic {
+	width: 60px;
+	height: 60px;
+}
+
+.user-info {
+	display: flex;
+	gap: 1em;
+	align-items: center;
+}
+
+.name-info {
+	display: flex;
+	flex-direction: column;
+	gap: 0.2em;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+
+.greet {
+	font-size: 0.7em;
+}
+
+.name-info:last-child {
+	font-size: 1.5em;
+}
+
+.buttons {
+	display: flex;
+	gap: 2em;
+	align-items: center;
+	justify-content: center;
+}
+.buttons > * {
+	width: 80px;
+	height: 40px;
+	border-radius: 20px;
+	border: none;
+	background-color: var(--side-bar-clr);
+	color: white;
+}
+
+.sidebar {
+	text-transform: capitalize;
+	background-color: var(--side-bar-clr);
+	grid-column: 1/2;
+	grid-row: 1/7;
+	display: flex;
+	flex-direction: column;
+	padding-left: 2em;
+	padding-right: 2em;
+	padding-top: 2em;
+	gap: 4em;
+	font-weight: bold;
+}
+.sidebar > * {
+	display: flex;
+	flex-direction: column;
+	color: var(--side-bar-font-clr);
+}
+
+.logo {
+	flex-direction: row;
+	font-size: 2em;
+}
+
+.nav,
+.branding {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5em;
+	font-size: 1.5em;
+}
+
+.nav > *,
+.branding > * {
+	display: flex;
+	gap: 1em;
+}
+
+.body {
+	background-color: var(--body-clr);
+	grid-column: 2/7;
+	grid-row: 2/7;
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	padding: 1em 1em 2em 1em;
+	gap: 1em 1em;
+	text-transform: capitalize;
+}
+
+.projects {
+	grid-column: 1 / 2;
+	grid-row: 1/3;
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+
+.projects > span {
+	font-weight: bold;
+}
+
+.boxes {
+	flex-grow: 1;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 1em 1em;
+}
+
+.boxes > * {
+	border-radius: 15px;
+	width: 100%;
+	height: 100%;
+	background-color: var(--header-clr);
+	overflow: hidden;
+}
+
+.card {
+	width: 100%;
+	height: 100%;
+	border-left: 10px solid #f0b429;
+	display: grid;
+	grid-template: 1fr 3fr 1fr / 1fr;
+	padding: 1em;
+	gap: 1em;
+}
+
+.title {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.click {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	gap: 0.5em;
+	align-items: center;
+}
+
+.text {
+	height: 90px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color: gray;
+}
+
+.announcements {
+	grid-column: 2 / 3;
+	grid-row: 1 / 2;
+}
+.news {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+
+.box {
+	flex-grow: 1;
+	border-radius: 15px;
+	width: 100%;
+	height: 100%;
+	background-color: var(--header-clr);
+	overflow: hidden;
+	padding: 2em;
+	display: grid;
+	grid-template: 1fr 1fr 1fr / 1fr;
+	gap: 1em;
+}
+
+.box > * {
+	border-bottom: 2px rgb(128, 128, 128, 0.2) solid;
+}
+
+.box:nth-child(1) {
+	border: none;
+}
+
+.newses {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color: gray;
+}
+
+.announcements > span {
+	font-weight: bold;
+}
+
+.trending {
+	grid-column: 2 / 3;
+	grid-row: 2 / 3;
+}
